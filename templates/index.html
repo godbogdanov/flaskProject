@@ -1,0 +1,49 @@
+{#<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML  4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">#}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html>
+ <head>
+        <title></title>
+        <style type='text/css'>
+            table {
+        border: thin solid black;
+        width: auto;
+        height: auto;
+    }
+        </style>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Маркировка</title>
+ </head>
+ <body>
+    <form action="/" method="post">
+        <table border="1" width="100%" cellpadding="5">
+            <tr>
+                <th>id</th>
+                <th>УНО</th>
+                <th>Тип</th>
+                <th>Производитель</th>
+                <th>Модель</th>
+                <th>Серийный номер</th>
+                <th>Инвентарный номер</th>
+                <th>Год</th>
+                <th>Кабинет</th>
+            </tr>
+            {% for col in items %}
+                <tr>
+                    <td> {{ col['id'] }} </td>
+                    <td> {{ col['uno'] }} </td>
+                    <td> {{ col['type'] }} </td>
+                    <td> {{ col['manufacturer'] }} </td>
+                    <td> {{ col['model'] }} </td>
+                    <td> {{ col['serial'] }} </td>
+                    <td> {{ col['inventory'] }} </td>
+                    <td> {{ col['year'] }} </td>
+                    <td> {{ col['place'] }} </td>
+{#                    <th><input type="submit" name="1" value="{{ col['id'] }}"></th>#}
+                </tr>
+            {% endfor %}
+        </table>
+    </form>
+</body>
+</html>
